@@ -1,0 +1,136 @@
+body {
+  text-align: center;
+  background: linear-gradient(45deg, #2c3e50, #000000);
+  font-family: 'Arvo', cursive;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #477c39;
+  text-shadow: 3px 3px #da040b;
+  margin: 20px 0;
+}
+
+footer {
+  color: #385e2e;
+  font-family: 'Arvo', sans-serif;
+  margin-top: auto;
+  padding: 20px;
+}
+
+.w, .a, .s, .d, .j, .k, .l {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.w {
+  background-image: url('images/crash.png');
+}
+
+.a {
+  background-image: url('images/kick.png');
+}
+
+.d {
+  background-image: url('images/tom1.png');
+  }
+  
+.j {
+  background-image: url('images/tom2.png');
+  }
+.s {
+  background-image: url('images/snare.png');
+  }
+
+.k {
+  background-image: url('images/tom3.png');
+}
+
+.l {
+  background-image: url('images/tom4.png');
+}
+
+.set {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.drum {
+  outline: none;
+  border: 5px solid #827701;
+  font-size: 3rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: #DA0463;
+  text-shadow: 2px 2px #DBEDF3;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.drum:hover {
+  transform: scale(1.1);
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .set {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .drum {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .set {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .set button:nth-child(7) {
+    grid-column: 2;
+  }
+}
